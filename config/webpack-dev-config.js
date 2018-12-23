@@ -15,7 +15,7 @@ module.exports = {
         new HtmlWebpackPlugin({ template: './static/index.html' }),
         new CopyWebpackPlugin([{ from: 'static', to: dist }]),
     ],
-    watch: mode === 'production',
+    watch: mode === 'development',
     devtool: 'eval',
     module: {
         rules: [
