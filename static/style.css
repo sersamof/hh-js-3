@@ -1,0 +1,85 @@
+.hh-select,
+.hh-select__list,
+.hh-select__row {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hh-select {
+    border: 1px solid #0f8fee;
+    border-radius: 5px;
+}
+.hh-select_open .hh-select__input {
+    border-bottom: 1px solid #0f8fee;
+}
+
+.hh-select__input {
+    font-size: 18px;
+    color: #666;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 0 25px;
+    height: 55px;
+}
+.hh-select__input:hover {
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.125);
+}
+.hh-select__input:focus {
+    outline: none;
+    border-radius: 5px 5px 0 0;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.hh-select__list {
+    list-style: none;
+    max-height: 200px;
+    overflow: scroll;
+}
+.hh-select__row {
+    cursor: pointer;
+    padding: 10px 25px;
+    margin: 5px 0;
+}
+
+.hh-select__row_hover {
+    background-color: #0f8fee;
+}
+
+.hh-select__placeholder {
+    padding: 10px 25px;
+    margin: 5px 0;
+}
+
+.hh-select__selected-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hh-select__selected-row {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #0f8fee;
+    border-radius: 3px;
+}
+
+.hh-select__selected-remove::before {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVEhL7ZbBCcJAEEUj2oBV2Ic3rcMmPHhQrEAbELEXPejRBgQ70IMn/R8yEJbN7oyZgEgePALR3edGXbbo+AX65fVbBuXVxAje4AkOecPIBD7hHqoXwOgdvkvP0BJn9AVl/AFm43wDVyqDRG08jIoLmKQHjzAcSHPxuiidwSycnJHYBHXxVHQO1VjiblFBE59C16iQil9hK1EhFY/pEhW0cdeowDgfbyxI17AVUj8keoH8cK6k/jJVXePaqOgST0VXkJHYa43imh2Jk9fFZZMxYdkG3eKWqNA4zuPKA8YmyG0OqfgGZtnBcKB2R2I83OH49MYwC08hPK5Yo0I1zii/OjWML6Hq5BCB8S1UrbTjHymKD9/s6KzGfa3UAAAAAElFTkSuQmCC')
+        no-repeat;
+    content: ' ';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    padding-right: 20px;
+    top: 1px;
+    cursor: pointer;
+}
+
+.hh-select__selected-remove {
+    position: relative;
+    margin-right: 20px;
+}
