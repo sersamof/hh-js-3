@@ -4,11 +4,11 @@ import { fromFetch } from './from-fetch';
 
 import { machine } from '../state-machine';
 
-import type { DownloaderMachine, DownloaderConfig } from './typings';
+import type { DownloaderMachine, DownloaderConfig, DownloaderResult } from './typings';
 
 export const createDownloaderMachine = (
     config: DownloaderConfig,
-    onLoad: ({}) => any
+    onLoad: (Array<DownloaderResult>) => any
 ): DownloaderMachine => {
     switch (config.type) {
         case 'fetch':

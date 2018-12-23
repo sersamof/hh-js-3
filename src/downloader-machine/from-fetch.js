@@ -1,11 +1,16 @@
 // @flow
-import type { Downloader, DownloaderUrlMapper, DownloaderResultMapper } from './typings';
+import type {
+    Downloader,
+    DownloaderResult,
+    DownloaderUrlMapper,
+    DownloaderResultMapper,
+} from './typings';
 import { machine, useState, useContext } from '../state-machine';
 
 export const fromFetch = (
     urlMapper: DownloaderUrlMapper,
     resultMapper: DownloaderResultMapper,
-    updateResults: ({}) => any
+    updateResults: (Array<DownloaderResult>) => void
 ): Downloader => {
     const id = Symbol('downloader');
     return {

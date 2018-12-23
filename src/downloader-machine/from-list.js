@@ -1,8 +1,11 @@
 // @flow
-import type { Downloader } from './typings';
+import type { Downloader, DownloaderResult } from './typings';
 import { machine, useState, useContext } from '../state-machine';
 
-export const fromList = (data: { text: string }, updateResults: ({}) => any): Downloader => {
+export const fromList = (
+    data: { text: string },
+    updateResults: (Array<DownloaderResult>) => void
+): Downloader => {
     const id = Symbol('downloader');
     return {
         id: id,
