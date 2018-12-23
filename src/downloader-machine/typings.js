@@ -5,7 +5,11 @@ export type DownloaderAction = 'load';
 export type DownloaderState = 'ready' | 'downloading';
 export type DownloaderTransition = 'load';
 export type DownloaderContext = any;
-export type DownloaderMachine = StateMachine<DownloaderContext, DownloaderState, DownloaderContext>;
+export type DownloaderMachine = StateMachine<
+    DownloaderContext,
+    DownloaderState,
+    DownloaderTransition
+>;
 export type Downloader = StateMachineDescription<
     DownloaderContext,
     DownloaderState,
